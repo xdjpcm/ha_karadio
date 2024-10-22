@@ -242,13 +242,13 @@ class KaradioDevice(MediaPlayerEntity):
 
   async def async_volume_up(self):
       """Volume up the media player."""
-      newVol = float(self._volume) + 0.1
+      newVol = float(self._volume) + 1
       await self.set_volume_level(newVol)
       self._volume = newVol
 
   async def async_volume_down(self):
       """Volume down media player."""
-      newVol = float(self._volume) - 0.1
+      newVol = float(self._volume) - 1
       await self.set_volume_level(newVol)
       self._volume = newVol
 
